@@ -3,16 +3,11 @@ import PropTypes from 'prop-types';
 import { ImageGalleryItem } from 'components/imageGalleryItem/ImageGalleryItem';
 import { GalleryList } from './Gallery.styled';
 
-export const ImageGallery = ({ images, openModal, getModalImg }) => {
+export const ImageGallery = ({ images }) => {
   return (
     <GalleryList>
       {images.map(el => (
-        <ImageGalleryItem
-          key={el.id}
-          image={el}
-          openModal={openModal}
-          getModalImg={getModalImg}
-        />
+        <ImageGalleryItem key={el.id} image={el} />
       ))}
     </GalleryList>
   );
@@ -20,6 +15,4 @@ export const ImageGallery = ({ images, openModal, getModalImg }) => {
 
 ImageGallery.propTypes = {
   images: PropTypes.arrayOf(PropTypes.object.isRequired),
-  openModal: PropTypes.func.isRequired,
-  getModalImg: PropTypes.func.isRequired,
 };

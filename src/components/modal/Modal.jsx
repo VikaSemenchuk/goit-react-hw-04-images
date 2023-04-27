@@ -4,11 +4,11 @@ import PropTypes from 'prop-types';
 import { Overlay, ModalStyle } from './Modal.styled';
 
 export const Modal = ({ closeModal, alt, modalImg }) => {
+  
   useEffect(() => {
     function escCloseModal(e) {
       if (e.code === 'Escape') closeModal();
     }
-
     document.addEventListener('keydown', escCloseModal);
 
     return () => document.removeEventListener('keydown', escCloseModal);

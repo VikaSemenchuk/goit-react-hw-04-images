@@ -8,9 +8,9 @@ import { toast } from 'react-toastify';
 export const Searchbar = ({ onSubmit }) => {
   const [search, setSearch] = useState('');
 
-  function handleChange ({ target: { value } }) {
+  function handleChange({ target: { value } }) {
     setSearch(value.toLowerCase());
-  };
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
